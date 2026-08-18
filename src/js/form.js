@@ -155,13 +155,79 @@ export function initForm() {
   const successEl = formWrapper?.querySelector('.form-success');
   const formAlert = form.querySelector('.form-alert');
 
+  // Multi-step logic
+  const steps = form.querySelectorAll('.form-step');
+  const progressBars = form.querySelectorAll('.progress-bar');
+  let currentStep = 1;
+  const totalSteps = steps.length;
+
+  function updateStep(newStep) {
+    if (steps.length === 0) return; // Not a multi-step form
+    
+    steps.forEach(step => step.classList.remove('is-active'));
+    const targetStep = form.querySelector(`.form-step[data-step="${newStep}"]`);
+    if (targetStep) targetStep.classList.add('is-active');
+
+    progressBars.forEach((bar, index) => {
+      if (index < newStep) {
+        bar.classList.add('is-active');
+        if (index < newStep - 1) bar.classList.add('is-completed');
+      } else {
+        bar.classList.remove('is-active', 'is-completed');
+      }
+    });
+    
+    currentStep = newStep;
+  }
+
+  form.querySelectorAll('.next-step').forEach(btn => {
+    btn.addEventListener('click', () => {
+      const currentStepEl = form.querySelector(`.form-step[data-step="${currentStep}"]`);
+      if (!currentStepEl) return;
+      
+      const inputs = currentStepEl.querySelectorAll('input, select, textarea');
+      let stepValid = true;
+      const stepErrors = {};
+
+      inputs.forEach(input => {
+        if (input.hasAttribute('required') && !input.value.trim()) {
+          stepValid = false;
+          stepErrors[input.name] = 'This field is required.';
+        } else if (input.name === 'email' && input.value && !isValidEmail(input.value)) {
+          stepValid = false;
+          stepErrors[input.name] = 'Please enter a valid email address.';
+        } else if (input.name === 'phone' && input.value && !isValidPhone(input.value)) {
+          stepValid = false;
+          stepErrors[input.name] = 'Please enter a valid phone number.';
+        }
+      });
+
+      if (!stepValid) {
+        showErrors(form, stepErrors);
+        return;
+      }
+      
+      showErrors(form, {});
+      if (currentStep < totalSteps) {
+        updateStep(currentStep + 1);
+      }
+    });
+  });
+
+  form.querySelectorAll('.prev-step').forEach(btn => {
+    btn.addEventListener('click', () => {
+      if (currentStep > 1) {
+        updateStep(currentStep - 1);
+      }
+    });
+  });
+
   form.addEventListener('submit', async (e) => {
     e.preventDefault();
 
     // Honeypot check
     const honeypot = form.querySelector('[name="hp_field"]');
     if (honeypot && honeypot.value) {
-      // Bot detected, silently show success to avoid tipping off
       if (successEl) {
         form.style.display = 'none';
         successEl.classList.add('is-visible');
@@ -179,35 +245,32 @@ export function initForm() {
       return;
     }
 
-    // Validate
+    // Validate entire form for safety
     const { valid, errors } = validateForm(form);
     if (!valid) {
       showErrors(form, errors);
-      // Focus first error field
-      const firstErrorField = form.querySelector('.has-error input, .has-error select, .has-error textarea');
-      if (firstErrorField) firstErrorField.focus();
       return;
     }
 
-    // Clear previous errors
     showErrors(form, {});
     if (formAlert) formAlert.style.display = 'none';
 
-    // Disable button
     if (submitBtn) {
       submitBtn.disabled = true;
       safeSetText(submitBtn, 'Submitting...');
     }
 
-    // Collect data
     const formData = collectFormData(form);
-
-    // Submit to CRM
     const result = await CRMAdapter.submit(formData);
 
     if (result.success) {
       submissions.push(Date.now());
       form.style.display = 'none';
+      
+      // Hide progress bar on success
+      const formProgress = form.querySelector('.form-progress');
+      if (formProgress) formProgress.style.display = 'none';
+      
       if (successEl) {
         successEl.classList.add('is-visible');
       }

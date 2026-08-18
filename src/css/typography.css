@@ -4,7 +4,9 @@ body {
   font-weight: var(--font-weight-normal);
   line-height: var(--line-height-normal);
   color: var(--color-text);
-  background-color: var(--color-white);
+  background-color: var(--color-surface-warm);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -40,7 +42,7 @@ h6 {
 
 p {
   color: var(--color-text-secondary);
-  line-height: var(--line-height-normal);
+  line-height: var(--line-height-relaxed);
 }
 
 p + p {
@@ -49,11 +51,12 @@ p + p {
 
 strong {
   font-weight: var(--font-weight-semibold);
-  color: var(--color-text);
+  color: var(--color-primary-dark);
 }
 
 small {
   font-size: var(--font-size-sm);
+  color: var(--color-text-tertiary);
 }
 
 .text-xs { font-size: var(--font-size-xs); }
@@ -71,8 +74,8 @@ small {
 .text-uppercase {
   text-transform: uppercase;
   letter-spacing: var(--letter-spacing-wider);
-  font-size: var(--font-size-sm);
-  font-weight: var(--font-weight-semibold);
+  font-size: var(--font-size-xs);
+  font-weight: var(--font-weight-bold);
 }
 
 @media (max-width: 768px) {
