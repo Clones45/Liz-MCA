@@ -1,0 +1,18 @@
+{
+  "name": "estrada-capital-group",
+  "private": true,
+  "version": "1.0.0",
+  "description": "Estrada Capital Group - Business Funding & MCA Loans",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "devDependencies": {
+    "vite": "^6.3.0"
+  },
+  "dependencies": {
+    "lucide": "^0.500.0"
+  }
+}

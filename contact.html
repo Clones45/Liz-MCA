@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Apply for Business Funding | Estrada Capital Group</title>
+  <meta name="description" content="Submit your information to explore business funding options. Quick application, no obligation. Speak with a funding specialist about MCA loans, SBA programs, and more.">
+
+  <meta property="og:title" content="Apply for Business Funding | Estrada Capital Group">
+  <meta property="og:description" content="Submit your information to explore business funding options. Quick application, no obligation.">
+  <meta property="og:type" content="website">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/src/css/main.css">
+</head>
+<body>
+
+  <!-- Header -->
+  <header class="site-header" role="banner">
+    <div class="header-inner">
+      <a href="/" class="logo" aria-label="Estrada Capital Group home"><span class="logo-mark">E</span><span>Estrada Capital Group</span></a>
+      <nav class="nav-main" aria-label="Main navigation">
+        <a href="/" class="nav-link">Home</a>
+        <a href="/business-funding.html" class="nav-link">Business Funding</a>
+        <a href="/mca-loans.html" class="nav-link">MCA Loans</a>
+        <a href="/funding-options.html" class="nav-link">Funding Options</a>
+        <a href="/how-it-works.html" class="nav-link">How It Works</a>
+        <a href="/faq.html" class="nav-link">FAQ</a>
+        <a href="/contact.html" class="nav-link">Contact</a>
+      </nav>
+      <a href="/contact.html" class="btn btn--primary nav-cta">Get Funding</a>
+      <button class="menu-toggle" aria-label="Toggle menu" aria-expanded="false" aria-controls="mobile-nav"><span></span><span></span><span></span></button>
+    </div>
+    <div class="mobile-nav-overlay" aria-hidden="true"></div>
+    <nav class="mobile-nav" id="mobile-nav" aria-label="Mobile navigation">
+      <a href="/" class="mobile-nav-link">Home</a>
+      <a href="/business-funding.html" class="mobile-nav-link">Business Funding</a>
+      <a href="/mca-loans.html" class="mobile-nav-link">MCA Loans</a>
+      <a href="/funding-options.html" class="mobile-nav-link">Funding Options</a>
+      <a href="/how-it-works.html" class="mobile-nav-link">How It Works</a>
+      <a href="/faq.html" class="mobile-nav-link">FAQ</a>
+      <a href="/contact.html" class="mobile-nav-link">Contact</a>
+      <a href="/contact.html" class="btn btn--primary btn--full">Get Funding</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="page-hero">
+      <div class="container">
+        <span class="section-label">Get Started</span>
+        <h1>Apply for Business Funding</h1>
+        <p>Tell us about your business and funding needs. A specialist will review your information and walk you through your options.</p>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <div class="contact-layout">
+
+          <!-- Contact Info Sidebar -->
+          <div class="contact-info reveal">
+            <h2>Talk to Our Team</h2>
+            <p>Prefer to reach out directly? We are available by phone and email to answer your questions and help you get started.</p>
+
+            <div class="contact-detail">
+              <div class="contact-detail-icon"><i data-lucide="phone"></i></div>
+              <div>
+                <h4>Phone</h4>
+                <a href="tel:+15597370273">(559) 737-0273</a>
+              </div>
+            </div>
+
+            <div class="contact-detail">
+              <div class="contact-detail-icon"><i data-lucide="mail"></i></div>
+              <div>
+                <h4>Email</h4>
+                <a href="mailto:liz@lizestrada.com">liz@lizestrada.com</a>
+              </div>
+            </div>
+
+            <div class="contact-detail">
+              <div class="contact-detail-icon"><i data-lucide="map-pin"></i></div>
+              <div>
+                <h4>Office</h4>
+                <p>525 N Hall St<br>Visalia, CA 93292</p>
+              </div>
+            </div>
+
+            <div class="contact-detail">
+              <div class="contact-detail-icon"><i data-lucide="clock"></i></div>
+              <div>
+                <h4>Response Time</h4>
+                <p>We typically respond within one business day.</p>
+              </div>
+            </div>
+
+            <div class="card" style="margin-top: var(--space-8); background-color: var(--color-surface-alt);">
+              <div class="card-icon"><i data-lucide="shield-check"></i></div>
+              <h3>Your Information Is Protected</h3>
+              <p>We treat your business and personal information with care. Your data is used only for the purpose of evaluating funding options and is never sold to third parties.</p>
+            </div>
+          </div>
+
+          <!-- Lead Form -->
+          <div class="form-card reveal reveal--delay-1">
+            <h3>Funding Application</h3>
+            <p>Complete the form below to get started. Required fields are marked with an asterisk.</p>
+
+            <div class="form-alert alert" style="display: none;" role="alert"></div>
+
+            <form id="lead-form" novalidate>
+              <!-- Honeypot -->
+              <div class="form-hp" aria-hidden="true">
+                <label for="hp_field">Leave this field empty</label>
+                <input type="text" name="hp_field" id="hp_field" tabindex="-1" autocomplete="off">
+              </div>
+
+              <div class="form-row">
+                <div class="form-group">
+                  <label for="firstName">First Name <span class="required" aria-label="required">*</span></label>
+                  <input type="text" id="firstName" name="firstName" class="form-input" required maxlength="100" placeholder="Your first name" autocomplete="given-name">
+                  <span class="form-error" role="alert"></span>
+                </div>
+                <div class="form-group">
+                  <label for="lastName">Last Name <span class="required" aria-label="required">*</span></label>
+                  <input type="text" id="lastName" name="lastName" class="form-input" required maxlength="100" placeholder="Your last name" autocomplete="family-name">
+                  <span class="form-error" role="alert"></span>
+                </div>
+              </div>
+
+              <div class="form-group">
+                <label for="businessName">Business Name <span class="required" aria-label="required">*</span></label>
+                <input type="text" id="businessName" name="businessName" class="form-input" required maxlength="200" placeholder="Your business name" autocomplete="organization">
+                <span class="form-error" role="alert"></span>
+              </div>
+
+              <div class="form-row">
+                <div class="form-group">
+                  <label for="phone">Phone <span class="required" aria-label="required">*</span></label>
+                  <input type="tel" id="phone" name="phone" class="form-input" required maxlength="20" placeholder="(555) 555-5555" autocomplete="tel">
+                  <span class="form-error" role="alert"></span>
+                </div>
+                <div class="form-group">
+                  <label for="email">Email <span class="required" aria-label="required">*</span></label>
+                  <input type="email" id="email" name="email" class="form-input" required maxlength="200" placeholder="you@business.com" autocomplete="email">
+                  <span class="form-error" role="alert"></span>
+                </div>
+              </div>
+
+              <div class="form-group">
+                <label for="industry">Business Industry</label>
+                <select id="industry" name="industry" class="form-select">
+                  <option value="">Select your industry</option>
+                  <option value="restaurant">Restaurant / Food Service</option>
+                  <option value="retail">Retail</option>
+                  <option value="construction">Construction / Contracting</option>
+                  <option value="healthcare">Healthcare / Medical</option>
+                  <option value="transportation">Transportation / Trucking</option>
+                  <option value="professional-services">Professional Services</option>
+                  <option value="manufacturing">Manufacturing</option>
+                  <option value="real-estate">Real Estate</option>
+                  <option value="technology">Technology</option>
+                  <option value="wholesale">Wholesale / Distribution</option>
+                  <option value="automotive">Automotive</option>
+                  <option value="beauty-wellness">Beauty / Wellness</option>
+                  <option value="ecommerce">E-Commerce</option>
+                  <option value="other">Other</option>
+                </select>
+                <span class="form-error" role="alert"></span>
+              </div>
+
+              <div class="form-row">
+                <div class="form-group">
+                  <label for="monthlyRevenue">Monthly Revenue</label>
+                  <select id="monthlyRevenue" name="monthlyRevenue" class="form-select">
+                    <option value="">Select range</option>
+                    <option value="under-10k">Under $10,000</option>
+                    <option value="10k-25k">$10,000 - $25,000</option>
+                    <option value="25k-50k">$25,000 - $50,000</option>
+                    <option value="50k-100k">$50,000 - $100,000</option>
+                    <option value="100k-250k">$100,000 - $250,000</option>
+                    <option value="250k-500k">$250,000 - $500,000</option>
+                    <option value="500k-plus">$500,000+</option>
+                  </select>
+                  <span class="form-error" role="alert"></span>
+                </div>
+                <div class="form-group">
+                  <label for="timeInBusiness">Time in Business</label>
+                  <select id="timeInBusiness" name="timeInBusiness" class="form-select">
+                    <option value="">Select range</option>
+                    <option value="pre-revenue">Pre-Revenue / Startup</option>
+                    <option value="under-6mo">Under 6 Months</option>
+                    <option value="6mo-1yr">6 Months - 1 Year</option>
+                    <option value="1yr-2yr">1 - 2 Years</option>
+                    <option value="2yr-5yr">2 - 5 Years</option>
+                    <option value="5yr-10yr">5 - 10 Years</option>
+                    <option value="10yr-plus">10+ Years</option>
+                  </select>
+                  <span class="form-error" role="alert"></span>
+                </div>
+              </div>
+
+              <div class="form-row">
+                <div class="form-group">
+                  <label for="fundingAmount">Funding Amount Needed</label>
+                  <select id="fundingAmount" name="fundingAmount" class="form-select">
+                    <option value="">Select range</option>
+                    <option value="under-25k">Under $25,000</option>
+                    <option value="25k-50k">$25,000 - $50,000</option>
+                    <option value="50k-100k">$50,000 - $100,000</option>
+                    <option value="100k-250k">$100,000 - $250,000</option>
+                    <option value="250k-500k">$250,000 - $500,000</option>
+                    <option value="500k-plus">$500,000+</option>
+                  </select>
+                  <span class="form-error" role="alert"></span>
+                </div>
+                <div class="form-group">
+                  <label for="fundingPurpose">Purpose of Funding</label>
+                  <select id="fundingPurpose" name="fundingPurpose" class="form-select">
+                    <option value="">Select purpose</option>
+                    <option value="working-capital">Working Capital</option>
+                    <option value="equipment">Equipment Purchase</option>
+                    <option value="inventory">Inventory</option>
+                    <option value="expansion">Business Expansion</option>
+                    <option value="real-estate">Commercial Real Estate</option>
+                    <option value="payroll">Payroll / Staffing</option>
+                    <option value="marketing">Marketing / Advertising</option>
+                    <option value="renovation">Renovation / Buildout</option>
+                    <option value="debt-consolidation">Debt Consolidation</option>
+                    <option value="other">Other</option>
+                  </select>
+                  <span class="form-error" role="alert"></span>
+                </div>
+              </div>
+
+              <div class="form-group" style="margin-top: var(--space-2);">
+                <p style="font-size: var(--font-size-xs); color: var(--color-text-tertiary); line-height: var(--line-height-relaxed);">
+                  By submitting this form, you consent to being contacted by Estrada Capital Group regarding your funding inquiry. Your information will be handled in accordance with our <a href="/privacy-policy.html" style="color: var(--color-accent);">Privacy Policy</a>. Submitting this form does not obligate you to any product or service and does not guarantee approval.
+                </p>
+              </div>
+
+              <button type="submit" class="btn btn--primary btn--lg btn--full" style="margin-top: var(--space-4);">Submit Application</button>
+            </form>
+
+            <!-- Success State -->
+            <div class="form-success" aria-live="polite">
+              <div class="form-success-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+              </div>
+              <h3>Application Received</h3>
+              <p>Thank you for submitting your information. A funding specialist will review your details and contact you within one business day to discuss your options.</p>
+              <p style="margin-top: var(--space-4);"><strong>Need to speak with someone sooner?</strong></p>
+              <p>Call us at <a href="tel:+15597370273" style="color: var(--color-accent); font-weight: var(--font-weight-medium);">(559) 737-0273</a></p>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="site-footer" role="contentinfo">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand"><a href="/" class="logo" style="color: var(--color-white);"><span class="logo-mark">E</span><span>Estrada Capital Group</span></a><p>Connecting businesses with the right funding solutions for over 20 years.</p></div>
+        <div class="footer-col"><h4>Funding</h4><a href="/business-funding.html" class="footer-link">Business Funding</a><a href="/mca-loans.html" class="footer-link">MCA Loans</a><a href="/funding-options.html" class="footer-link">Funding Options</a><a href="/how-it-works.html" class="footer-link">How It Works</a><a href="/faq.html" class="footer-link">FAQ</a></div>
+        <div class="footer-col"><h4>Company</h4><a href="/contact.html" class="footer-link">Contact</a><a href="/privacy-policy.html" class="footer-link">Privacy Policy</a><a href="/terms.html" class="footer-link">Terms of Service</a></div>
+        <div class="footer-col"><h4>Contact</h4><div class="footer-contact-item"><i data-lucide="phone"></i><a href="tel:+15597370273">(559) 737-0273</a></div><div class="footer-contact-item"><i data-lucide="mail"></i><a href="mailto:liz@lizestrada.com">liz@lizestrada.com</a></div><div class="footer-contact-item"><i data-lucide="map-pin"></i><span>525 N Hall St<br>Visalia, CA 93292</span></div></div>
+      </div>
+      <hr class="footer-divider">
+      <div class="footer-bottom">
+        <div class="footer-legal"><p>&copy; 2026 Estrada Capital Group. All rights reserved.</p><p>Business funding products are subject to approval based on underwriting criteria. Submitting an application does not guarantee approval or a specific funding amount.</p></div>
+        <div class="footer-social"><a href="https://www.facebook.com/loanswithlize" aria-label="Facebook" target="_blank" rel="noopener noreferrer"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg></a><a href="https://www.instagram.com/lizzylending" aria-label="Instagram" target="_blank" rel="noopener noreferrer"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg></a></div>
+      </div>
+    </div>
+  </footer>
+
+  <script type="module" src="/src/js/main.js"></script>
+</body>
+</html>
